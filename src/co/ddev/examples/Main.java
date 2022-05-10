@@ -24,7 +24,7 @@ public class Main {
 
     private static HttpHandler getHttpHandler() {
         return exchange -> {
-            String response = "Hello from server";
+            String response = "<h1>Hello from server</h1>";
             exchange.sendResponseHeaders(200, response.length());
             OutputStream outputStream = exchange.getResponseBody();
             outputStream.write(response.getBytes(StandardCharsets.UTF_8));
